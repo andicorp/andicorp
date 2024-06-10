@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step by Step</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="body">
+        <div class="container">
+            <header>
+                <div class="header-content">
+                    <h1>Step By Step</h1>
+                    <h4> Task Tracker</h4>
+                    <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+                </div>
+            </header>
+            <main>
+                <div class="task-input-container">
+                    <div class="task-input">
+                        <label for="steps">Enter Steps of Your Task:</label>
+                        <textarea id="steps" rows="4" placeholder="e.g., Step 1, Step 2, Step 3"></textarea>
+                        <div>
+                            <button onclick="generateTracker()">Generate Tracker</button>
+                            <button onclick="resetTracker()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-progress">
+                    <div class="progress-bar-container" id="progress-bar-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <div id="progress-tracker"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <canvas id="confetti-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+
+</html>

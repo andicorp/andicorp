@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'Font';
+    src: url('font.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url('font2.otf') format('opentype');
+}
+
+body {
+    background: #fad0c4;
+    font-family: 'Font2', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    background: #ff6ec7;
+    padding: 20px;
+    border-bottom: 5px solid #e346a7;
+}
+
+header h1 {
+    font-family: 'Font', sans-serif;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px #e346a7;
+}
+
+.rainbow-text {
+    animation: rainbow 1.5s infinite linear;
+}
+
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+    7% {
+        color: orangered;
+    }
+    14% {
+        color: orange;
+    }
+    21% {
+        color: gold;
+    }
+    28% {
+        color: yellow;
+    }
+    35% {
+        color: yellowgreen;
+    }
+    42% {
+        color: lime;
+    }
+    49% {
+        color: green;
+    }
+    56% {
+        color: aqua;
+    }
+    63% {
+        color: cyan;
+    }
+    70% {
+        color: royalblue;
+    }
+    77% {
+        color: blue;
+    }
+    84% {
+        color: darkviolet;
+    }
+    91% {
+        color: violet;
+    }
+    100% {
+        color: red; /* Back to the beginning for smooth loop */
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+#about-me, #my-work, #my-art, #contact {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+}
+
+#about-me, #contact {
+    border: 2px dashed #ff69b4;
+    width: 800px;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#about-me .content p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#my-work, #my-art {
+    border: 2px dashed #ff69b4;
+    width: 800px;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#about-me h2, #my-work h2, #my-art h2, #contact h2 {
+    font-family: 'Font', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: 2px 2px #fff;
+    color: #ff69b4;
+}
+
+#about-me .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ff69b4;
+}
+
+.doodle-portrait {
+    width: 200px;
+    margin-bottom: 40px;
+    border: 5px solid #ff69b4;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff9a9e;
+    height: 200px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    transition: transform 0.3s, border-color 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    border: 5px solid #ff69b4;
+    margin-bottom: 45px;
+    object-fit: cover;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+    border-color: #e346a7;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    color: #fff;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ff69b4;
+}
+
+.social-btn img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ff6ec7;
+    border-top: 5px solid #e346a7;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Font2', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px #ff69b4;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    overflow: auto;
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid #7d7d7d;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    color: rgb(255, 0, 0);
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: rgb(244, 120, 120);
+    text-decoration: none;
+    
+}
+
+#popup-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#popup-description {
+    color: #333;
+}   
+
+link {
+    color: #e346a7;
+}
+
+.social-btn:hover {
+    background-color: #f2bbdd;
+    box-shadow: 0 0 15px #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}

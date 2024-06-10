@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Tick</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="body">
+        <div class="container">
+            <header>
+                <div class="header-content">
+                    <h1>Tutor Tick</h1>
+                    <h4>Study Timer</h4>
+                    <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+                </div>
+            </header>
+            <main>
+                <div class="timer-input-container">
+                    <label for="goal-hours">Enter Goal Time:</label>
+                    <div class="time-inputs">
+                        <input type="number" id="goal-hours" placeholder="Hours" min="0">
+                        <input type="number" id="goal-minutes" placeholder="Minutes" min="0" max="59">
+                    </div>
+                    <button onclick="startTimer()">Start Timer</button>
+                </div>
+                <div class="timer-display-container">
+                    <div id="time-left-container">
+                        <div id="time-left">00:00:00</div>
+                    </div>
+                    <div>
+                        <button id="pause-button" class="hidden" onclick="togglePause()">Pause</button>
+                        <button id="reset-button" class="hidden" onclick="resetTimer()">Reset</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
